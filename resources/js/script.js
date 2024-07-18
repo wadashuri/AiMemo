@@ -1,0 +1,1 @@
+import './user/memo/content.js'; //メモの内容
