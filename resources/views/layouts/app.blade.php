@@ -14,9 +14,10 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/script.js'])
+    @livewireStyles
 </head>
 
-<body class="font-sans antialiased h-full">
+<body iclass="font-sans antialiased h-full">
     <div class="flex h-full bg-gray-100">
         <!-- サイドバー -->
         @include('sidebar')
@@ -31,6 +32,7 @@
             </main>
         </div>
     </div>
+    @livewireScripts
 </body>
 
 </html>

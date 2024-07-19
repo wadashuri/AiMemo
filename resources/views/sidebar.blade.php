@@ -5,16 +5,8 @@
     </div>
     <div class="h-full">
         <!-- サイドバーのコンテンツ -->
-        <ul class="mt-6">
-            <li class="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
-                <a href="#">Link 1</a>
-            </li>
-            <li class="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
-                <a href="#">Link 2</a>
-            </li>
-            <li class="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
-                <a href="#">Link 3</a>
-            </li>
+        <ul id="index-app" class="mt-6">
+            <index></index>
         </ul>
     </div>
 </div>

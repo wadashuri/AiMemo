@@ -14,7 +14,7 @@ Route::middleware([
 ])->group(function () {
     // API ルート
     Route::group(['prefix' => 'api', 'as' => 'api.'], function () {
-        Route::get('/memo/index', [MemoController::class, 'memoIndex'])->name('memo.index');
+        Route::get('/memo/index', [MemoController::class, 'index'])->name('memo.index');
     });
 
     // ビュー表示用のルート
