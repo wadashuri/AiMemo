@@ -15,7 +15,14 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/script.js'])
 </head>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        });
+    });
+</script>
 <body id="app" iclass="font-sans antialiased h-full">
     <div class="flex h-full bg-gray-100">
         <!-- サイドバー -->
