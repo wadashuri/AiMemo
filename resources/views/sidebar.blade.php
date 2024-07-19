@@ -4,9 +4,7 @@
         <span class="text-xl font-bold">Sidebar</span>
     </div>
     <div class="h-full">
-        <!-- サイドバーのコンテンツ -->
-        <ul class="mt-6">
-            <index></index>
+        <ul id="memo-list" class="mt-6">
         </ul>
     </div>
 </div>
