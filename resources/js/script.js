@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-import Index from './components/memo/index.vue';
-import Show from './components/memo/show.vue';
+import Index from './memo/index.vue';
+import Show from './memo/show.vue';
 
 // Indexコンポーネントをマウント
 createApp(Index).mount('#index-app');
