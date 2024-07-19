@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('memos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('title')->comment('メモのタイトル');
-            $table->text('content')->comment('メモの内容');
+            $table->string('title')->nuuable()->comment('メモのタイトル');
+            $table->text('content')->nuuable()->comment('メモの内容');
             $table->timestamps();
         });
     }

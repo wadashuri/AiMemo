@@ -8,7 +8,7 @@
     <div class="flex flex-col min-h-screen h-screen">
         <div class="flex-grow mx-auto w-full">
             <div id="show-app" class="bg-white overflow-hidden shadow-xl sm:rounded-lg h-full">
-                <x-memo-show />
+                <show></show>
             </div>
         </div>
     </div>
