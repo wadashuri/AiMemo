@@ -62,4 +62,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * リレーションを定義
+     */
+    public function memos(){
+        return $this->hasMany(Memo::class);
+    }
 }
