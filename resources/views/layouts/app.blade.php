@@ -14,17 +14,16 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/script.js'])
-    @livewireStyles
 </head>
 
-<body iclass="font-sans antialiased h-full">
+<body id="app" iclass="font-sans antialiased h-full">
     <div class="flex h-full bg-gray-100">
         <!-- サイドバー -->
         @include('sidebar')
 
         <div class="flex-1 flex flex-col overflow-y-auto transition-all duration-300">
             <!-- ナビゲーション -->
-            @livewire('navigation-menu')
+            @include('navigation-menu')
 
             <!-- コンテンツ -->
             <main class="flex-grow">
@@ -32,7 +31,6 @@
             </main>
         </div>
     </div>
-    @livewireScripts
 </body>
 
 </html>

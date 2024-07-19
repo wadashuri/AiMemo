@@ -5,7 +5,7 @@
     </div>
     <div class="h-full">
         <!-- サイドバーのコンテンツ -->
-        <ul id="index-app" class="mt-6">
+        <ul class="mt-6">
             <index></index>
         </ul>
     </div>

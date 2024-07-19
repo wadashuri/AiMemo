@@ -16,6 +16,15 @@
                     {{-- <x-nav-link href="{{ route('memo') }}" :active="request()->routeIs('memo')">
                         {{ __('Memo') }}
                     </x-nav-link> --}}
+                    <x-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                        {{ __('Profile') }}
+                    </x-nav-link>
+    
+                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                        <x-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
+                            {{ __('API Tokens') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -77,7 +86,7 @@
 
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
-                    <x-dropdown align="right" width="48">
+                    {{-- <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                 <button
@@ -128,7 +137,14 @@
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
-                    </x-dropdown>
+                    </x-dropdown> --}}
+                    <form method="POST" action="{{ route('logout') }}" id="logout-form">
+                        @csrf
+                    
+                        <a href="{{ route('logout') }}" id="logout-link">
+                            {{ __('Log Out') }}
+                        </a>
+                    </form>
                 </div>
             </div>
 
@@ -230,3 +246,11 @@
         </div>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        });
+    });
+</script>
