@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!data.data || data.data.length === 0) {
                 memoList.innerHTML =
-                    '<li class="px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">メモはありません。</li>';
+                    '<li class="px-4 py-2 text-white hover:text-white hover:bg-gray-700">メモはありません。</li>';
             } else {
                 data.data.forEach((memo) => {
                     const listItem = document.createElement("li");
                     listItem.textContent = memo.memos.title;
                     listItem.className =
-                        "px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700";
+                        "px-4 py-2 text-white hover:text-white hover:bg-gray-700";
                     memoList.appendChild(listItem);
                 });
             }
