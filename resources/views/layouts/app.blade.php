@@ -19,8 +19,8 @@
 
 <body iclass="font-sans antialiased h-full">
     <div class="flex h-full bg-gray-100">
-        <!-- サイドバー -->
-        @include('sidebar')
+        <!-- メモ一覧 -->
+        @include('memo.index')
 
         <div class="flex-1 flex flex-col overflow-y-auto transition-all duration-300">
             <!-- ナビゲーション -->

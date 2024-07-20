@@ -20,6 +20,6 @@ Route::middleware([
     
     // ビュー表示用のルート
     Route::get('/memo', function () {
-        return view('memo');
+        return view('memo.show');
     })->name('memo');
 });
