@@ -2,6 +2,7 @@
 namespace App\UseCases\memo;
 
 use App\Repositories\Interfaces\MemoRepositoryInterface;
+use Illuminate\Http\Response;
 
 class StoreMemoUseCase
 {
@@ -12,6 +13,13 @@ class StoreMemoUseCase
 
     public function execute($data): object
     {
-        return $this->memo->storeMemo($data);
+        try {
+            $this->memo->storeMemo($data);
+            return response()->json([
+                'status' => config('const.SUCCESS_MESSAGE')
+            ], Response::HTTP_OK);
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
     }
 }

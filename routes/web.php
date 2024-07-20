@@ -17,7 +17,7 @@ Route::middleware([
         Route::get('/memo/index', 'index')->name('memo.index');
         Route::post('/memo/store', 'store')->name('memo.store');
     });
-
+    
     // ビュー表示用のルート
     Route::get('/memo', function () {
         return view('memo');

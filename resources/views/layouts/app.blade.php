@@ -13,24 +13,18 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/script.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById('logout-link').addEventListener('click', function (event) {
-            event.preventDefault();
-            document.getElementById('logout-form').submit();
-        });
-    });
-</script>
-<body id="app" iclass="font-sans antialiased h-full">
+
+<body iclass="font-sans antialiased h-full">
     <div class="flex h-full bg-gray-100">
         <!-- サイドバー -->
         @include('sidebar')
 
         <div class="flex-1 flex flex-col overflow-y-auto transition-all duration-300">
             <!-- ナビゲーション -->
-            @include('navigation-menu')
+            @livewire('navigation-menu')
 
             <!-- コンテンツ -->
             <main class="flex-grow">
@@ -38,6 +32,7 @@
             </main>
         </div>
     </div>
+    @livewireScripts
 </body>
 
 </html>

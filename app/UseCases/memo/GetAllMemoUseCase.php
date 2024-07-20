@@ -12,6 +12,10 @@ class GetAllMemoUseCase
 
     public function execute(): object
     {
-        return $this->memo->getAllMemos();
+        try {
+            return $this->memo->getAllMemos();
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
     }
 }

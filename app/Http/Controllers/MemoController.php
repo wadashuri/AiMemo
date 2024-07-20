@@ -24,7 +24,6 @@ class MemoController extends Controller
      */
     public function store(Request $request, StoreMemoUseCase $useCase)
     {
-        $useCase->execute($request->all());
-        return response()->json([], 201);
+        return $useCase->execute($request->all());
     }
 }
