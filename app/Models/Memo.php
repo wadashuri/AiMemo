@@ -9,7 +9,11 @@ class Memo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id','title', 'content'];
+    protected $fillable = ['title', 'content'];
+
+    protected $casts = [
+        'content' => 'array',
+    ];
 
     /**
      * リレーションを定義

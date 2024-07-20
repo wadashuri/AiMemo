@@ -15,6 +15,7 @@ Route::middleware([
     // API ルート
     Route::group(['prefix' => 'api', 'as' => 'api.', 'controller' => MemoController::class], function () {
         Route::get('/memo/index', 'index')->name('memo.index');
+        Route::get('/memo/{memoId}', 'show')->name('memo.show');
         Route::post('/memo/store', 'store')->name('memo.store');
     });
     

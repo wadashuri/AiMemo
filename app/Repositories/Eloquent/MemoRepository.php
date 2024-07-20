@@ -12,6 +12,11 @@ class MemoRepository implements MemoRepositoryInterface
         return auth()->user()->memos;
     }
 
+    public function showMemo(int $memoId): object
+    {
+        return auth()->user()->memos()->findOrFail($memoId);
+    }
+
     public function storeMemo(array $data): void
     {
         auth()->user()->memos()->create($data);
