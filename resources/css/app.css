@@ -1,0 +1,9 @@
+@import './layouts/sidebar.css'; /* サイドバー */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+[x-cloak] {
+    display: none;
+}
